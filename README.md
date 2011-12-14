@@ -30,3 +30,5 @@ Email Yak Features In Demo
 **REQUIRED**: In order to use the demo, you have to have an Email Yak API key and a 
 public callback URL (for push notification). When you open up the demo, it will ask
 you to provide this information as part of the demo login.
+
+Author: (Ben Nadel)[http://www.bennadel.com]
