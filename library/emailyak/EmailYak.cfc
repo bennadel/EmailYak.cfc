@@ -432,6 +432,21 @@
 	
 	
 	<cffunction
+		name="getLastHttpResponse"
+		access="public"
+		returntype="any"
+		output="false"
+		hint="I return the last stored HTTP response from the Email Yak API.">
+		
+		<!--- 
+			Duplicate the response object so that we don't violate encapsulation by
+			passing back a reference to a shared object. 
+		--->
+		<cfreturn duplicate( variables.lastHttpResponse ) />
+	</cffunction>
+	
+	
+	<cffunction
 		name="getNewEmail"
 		access="public"
 		returntype="struct"
@@ -687,7 +702,7 @@
 		
 		<!--- Post the data. --->
 		<cfset local.response = this.postData(
-			resource = "#variables.apiBaseUrl#/register/domain/",
+			resource = "#variables.apiBaseUrl#/register/address/",
 			data = local.data
 			) />
 	
